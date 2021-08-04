@@ -78,7 +78,7 @@ router.post("/login", (req, res) => {
     });
 });
 
-//api to gey user by id
+//api to get user by id
 router.get("/:id", (req, res) => {
   User.findById(req.params.id)
     .then((user) => {
