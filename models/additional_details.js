@@ -22,5 +22,5 @@ const additionalDetailsSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
-
+// comment
 module.exports = mongoose.model("additionalDetails", additionalDetailsSchema);
