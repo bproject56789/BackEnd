@@ -39,6 +39,12 @@ const userSchema = new mongoose.Schema(
     isAdvocate: {
       type: Boolean,
     },
+    isFeatured: {
+      type: Boolean,
+    },
+    isTrending: {
+      type: Boolean,
+    },
     advocateDetails: {
       experience: {
         type: Number,
