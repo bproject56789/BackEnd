@@ -81,7 +81,7 @@ router.post("/login", (req, res) => {
 
 //api to get user by name
 router.get("/name", (req, res) => {
-  User.findOne({'name':req.params.name})
+  User.findOne({'name':'esmail'})
     .then((user) => {
       GATEKEEPER.response(res, 200, user);
     })
