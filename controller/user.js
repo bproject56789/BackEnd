@@ -78,9 +78,10 @@ router.post("/login", (req, res) => {
     });
 });
 
-//api to get user by id
+
+//api to get user by name
 router.get("/name", (req, res) => {
-  User.findOne({'name':req.body.name})
+  User.findOne({'name':req.params.name})
     .then((user) => {
       GATEKEEPER.response(res, 200, user);
     })
