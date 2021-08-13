@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 
 mongoose
   .connect(
-    "mongodb+srv://bproject:Compaq12345@cluster0.bkvcx.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "mongodb+srv://bproject:Compaq12345@cluster0.bkvcx.mongodb.net/ylc?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then((_) => console.log("DB connected"))
