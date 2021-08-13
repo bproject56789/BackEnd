@@ -93,6 +93,14 @@ const userSchema = new mongoose.Schema(
             type: Number,
           },
         },
+        offline: {
+          price: {
+            type: Number,
+          },
+          time: {
+            type: Number,
+          },
+        },
       },
     },
     additionalDetails: {
