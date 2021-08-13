@@ -79,9 +79,10 @@ router.post("/login", (req, res) => {
 });
 
 
+
 //api to get user by name
 router.get("/name", (req, res) => {
-  User.findOne({'name':'esmail'})
+  User.findOne({'name':req.params.name})
     .then((user) => {
       GATEKEEPER.response(res, 200, user);
     })
@@ -89,6 +90,10 @@ router.get("/name", (req, res) => {
       GATEKEEPER.response(res, 404, JSON.stringify({ message: err.message }));
     });
 });
+
+
+
+
 
 //api to get user by id
 router.get("/:id", (req, res) => {
@@ -101,6 +106,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
+
 //api to create a user
 router.post("/", (req, res, next) => {
   User.create({
@@ -110,6 +116,11 @@ router.post("/", (req, res, next) => {
     photo: req.body.photo,
     password: req.body.password,
     isAdvocate: req.body.isAdvocate,
+    isTreanding: req.body.isTreanding,
+    isFeatured: req.body.isFeatured,
+    state: req.body.state,
+    
+
   })
     .then((admin) => {
       GATEKEEPER.response(res, 201, admin);
