@@ -35,7 +35,7 @@ mongoose
   .catch((e) => console.log(e));
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use("/user", usersRouter);
 app.use("/questions", questionsRouter);
 app.use("/answers", answersRouter);
 app.use("/reviews", reviewsRouter);
